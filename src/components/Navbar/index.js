@@ -10,6 +10,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import React, { useState } from 'react';
+import { theme } from '../../utils';
 
 const settings = ['Profile', 'Settings', 'Logout'];
 
@@ -25,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white' }}>
+    <AppBar position="sticky" sx={{ backgroundColor: theme.palette.primary.light }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Icon Left */}
@@ -41,12 +42,12 @@ const Navbar = () => {
                 fontFamily: 'monospace',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
-                color: 'black',
+                color: theme.palette.primary.dark,
                 textDecoration: 'none',
                 alignItems: 'center'
               }}
             >
-              <p style={{ backgroundColor: 'black', color: 'white', paddingLeft: 10, paddingRight: 1 }}>News </p> Portal
+              <p style={{ backgroundColor: theme.palette.primary.dark, color: theme.palette.primary.light, paddingLeft: 10, paddingRight: 1, marginRight: 10 }}>News </p> Portal
             </Typography>
           </Box>
 
@@ -58,9 +59,9 @@ const Navbar = () => {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                color="inherit"
+                // color="inherit"
                 // onClick={handleOpenUserMenu}
-                sx={{ p: 0, mr: 5, color: 'black' }}
+                sx={{ p: 0, mr: 5, color: theme.palette.primary.dark }}
               >
                 <SearchIcon />
               </IconButton>
@@ -71,9 +72,9 @@ const Navbar = () => {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                color="inherit"
+                // color="inherit"
                 onClick={handleOpenUserMenu}
-                sx={{ p: 0, color: 'black' }}
+                sx={{ p: 0, color: theme.palette.primary.dark }}
               >
                 <MenuIcon />
               </IconButton>

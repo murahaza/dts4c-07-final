@@ -1,10 +1,13 @@
 import React from 'react';
-import { Navbar } from '../../components';
+import { Footer, HotTopicsNews, LatestNews, Navbar } from '../../components';
 
 const Dashboard = () => {
   return (
     <div>
       <Navbar />
+      <HotTopicsNews />
+      <LatestNews />
+      <Footer />
     </div>
   );
 }
