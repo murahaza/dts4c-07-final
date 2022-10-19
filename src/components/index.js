@@ -1,1 +1,3 @@
-export * from './'
+import Navbar from './Navbar'
+
+export { Navbar }

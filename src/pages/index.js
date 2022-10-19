@@ -1,1 +1,3 @@
-export * from './'
+import Dashboard from "./Dashboard"
+
+export { Dashboard }
