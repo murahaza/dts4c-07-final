@@ -62,7 +62,7 @@ const news = [
   }
 ]
 
-const LatestNews = () => {
+const LatestNews = ({navigate}) => {
   console.log('news', news)
   return (
     <Box sx={{ height: '100vh', margin: 2 }}>
@@ -73,7 +73,7 @@ const LatestNews = () => {
         {
           news.map((data) => (
             <Card sx={{ width: 270, margin: 2 }} key={data.id}>
-              <CardActionArea>
+              <CardActionArea onClick={() => navigate('/detailnews')}>
                 <CardMedia
                   component="img"
                   height="180"

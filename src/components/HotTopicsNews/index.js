@@ -3,7 +3,7 @@ import React from 'react';
 import { banner } from '../../assets';
 import { theme } from '../../utils';
 
-const HotTopicsNews = () => {
+const HotTopicsNews = ({ navigate }) => {
   return (
     <Box sx={{ height: 'auto', margin: 2 }}>
       <Typography variant='h5' fontWeight='bold' align='left' sx={{ margin: 2 }}>
@@ -13,7 +13,7 @@ const HotTopicsNews = () => {
 
         <Card sx={{ dispaly: 'flex', maxWidth: 1000 }}>
           <Box square={true} sx={{ display: 'flex', flexDirection: 'column' }}>
-            <CardActionArea sx={{ width: '100%', height: '100%' }}>
+            <CardActionArea sx={{ width: '100%', height: '100%' }} onClick={() => navigate('/detailnews')}>
               <CardMedia
                 component='img'
                 image={banner}

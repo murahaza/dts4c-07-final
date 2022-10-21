@@ -1,19 +1,21 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Footer, HotTopicsNews, LatestNews, Navbar } from '../../components';
+
 
 const Dashboard = () => {
 
-
+  const navigate = useNavigate()
 
   return (
-    <div>
+    <>
       <Navbar />
       <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
-        <HotTopicsNews />
-        <LatestNews />
-        <Footer />
+        <HotTopicsNews navigate={navigate} />
+        <LatestNews navigate={navigate} />
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
 
