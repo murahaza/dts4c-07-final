@@ -22,9 +22,3 @@ const DetailNews = () => {
     <div>this is page detail news</div>
   )
 }
-
-// function DetailNews(params) {
-//   return (
-//     <div>this is page detail news</div>
-//   )
-// }

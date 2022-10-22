@@ -62,8 +62,7 @@ const news = [
   }
 ]
 
-const LatestNews = ({navigate}) => {
-  console.log('news', news)
+const LatestNews = ({ navigate, newsTop }) => {
   return (
     <Box sx={{ height: '100vh', margin: 2 }}>
       <Typography variant='h5' fontWeight='bold' align='left' sx={{ margin: 2 }}>

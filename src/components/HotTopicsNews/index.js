@@ -3,19 +3,21 @@ import React from 'react';
 import { banner } from '../../assets';
 import { theme } from '../../utils';
 
-const HotTopicsNews = ({ navigate }) => {
+const HotTopicsNews = ({ navigate, news }) => {
   return (
     <Box sx={{ height: 'auto', margin: 2 }}>
       <Typography variant='h5' fontWeight='bold' align='left' sx={{ margin: 2 }}>
         Hot Topics News
       </Typography>
+
       <Box sx={{ display: 'flex', margin: 2 }} >
 
         <Card sx={{ dispaly: 'flex', maxWidth: 1000 }}>
-          <Box square={true} sx={{ display: 'flex', flexDirection: 'column' }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardActionArea sx={{ width: '100%', height: '100%' }} onClick={() => navigate('/detailnews')}>
               <CardMedia
                 component='img'
+                // image={news.data[0].image_url}
                 image={banner}
                 alt='banner picture'
                 width={'100%'}
@@ -23,37 +25,23 @@ const HotTopicsNews = ({ navigate }) => {
               />
               <div style={{ zIndex: 100, position: 'absolute', left: 0, bottom: 0, width: 350, padding: 10 }}>
                 <Typography fontSize={30} align='left' color={theme.palette.primary.light}>
-                  Massa tortor nibh nulla <br /> condimentum imperdiet <br />scelerisque...
+                  {/* {news.data[0].title} */}
+                  title
                 </Typography>
                 <Box sx={{ width: 160, padding: 0, margin: 0, justifyContent: 'space-between', display: 'flex', mt: 2 }}>
                   <Typography variant="caption" color={theme.palette.primary.main} fontSize={12}>
                     2 Haour Ago
+                    {/* {news.data[0].published_at} */}
                   </Typography>
                   <Typography variant="caption" color={theme.palette.primary.main} fontSize={12}>
-                    CNN Indonesia
+                    {/* {news.data[0].source} */}
+                    author
                   </Typography>
                 </Box>
               </div>
             </CardActionArea>
           </Box>
         </Card>
-
-        {/* 
-        <div style={{ maxWidth: '100vh', position: 'relative' }}>
-          <img src={banner} alt="gambar" srcset={banner} style={{ maxwidth: '50%', height: 'auto', padding: 0, margin: 0, position: 'absolute', top: 0, left: 0 }} />
-          <div style={{ zIndex: 100, position: 'absolute', color: 'white', left: 10, top: 200, bgcolor: 'red', width: 350, }}>
-            <Typography fontSize={30} align='left'>Massa tortor nibh nulla <br /> condimentum imperdiet <br />scelerisque...</Typography>
-            <Box sx={{ width: 160, padding: 0, margin: 0, justifyContent: 'space-between', display: 'flex', mt: 2 }}>
-              <Typography variant="caption" color={theme.palette.primary.main} fontSize={12}>
-                2 Haour Ago
-              </Typography>
-              <Typography variant="caption" color={theme.palette.primary.main} fontSize={12}>
-                CNN Indonesia
-              </Typography>
-            </Box>
-          </div>
-        </div> */}
-
 
         <Box sx={{ width: 270, ml: 2, mt: 1, display: { xs: 'none', md: 'flex' } }} align='left' >
           <Typography variant="caption" color={theme.palette.primary.dark} fontSize={18}>
