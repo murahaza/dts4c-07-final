@@ -17,25 +17,25 @@ const HotTopicsNews = ({ navigate, news }) => {
             <CardActionArea sx={{ width: '100%', height: '100%' }} onClick={() => navigate('/detailnews')}>
               <CardMedia
                 component='img'
-                // image={news.data[0].image_url}
-                image={banner}
+                // image={banner}
+                image={news.data[0].image_url}
                 alt='banner picture'
                 width={'100%'}
                 height={'100%'}
               />
               <div style={{ zIndex: 100, position: 'absolute', left: 0, bottom: 0, width: 350, padding: 10 }}>
                 <Typography fontSize={30} align='left' color={theme.palette.primary.light}>
-                  {/* {news.data[0].title} */}
-                  title
+                  {/* title */}
+                  {news.data[0].title}
                 </Typography>
                 <Box sx={{ width: 160, padding: 0, margin: 0, justifyContent: 'space-between', display: 'flex', mt: 2 }}>
                   <Typography variant="caption" color={theme.palette.primary.main} fontSize={12}>
-                    2 Haour Ago
-                    {/* {news.data[0].published_at} */}
+                    {/* 2 Haour Ago */}
+                    {news.data[0].published_at}
                   </Typography>
                   <Typography variant="caption" color={theme.palette.primary.main} fontSize={12}>
-                    {/* {news.data[0].source} */}
-                    author
+                    {/* author */}
+                    {news.data[0].source}
                   </Typography>
                 </Box>
               </div>

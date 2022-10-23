@@ -6,7 +6,7 @@ import { Footer, HotTopicsNews, LatestNews, Navbar } from '../../components';
 const Dashboard = () => {
 
   const navigate = useNavigate()
-  const APINEWS = `https://api.thenewsapi.com/v1/news/top?api_token=kBCM5I16qNd0tibV4V4iDx4EhJeKnqs7pMcn8lBo&locale=us&limit=1`
+  const APINEWS = `https://api.thenewsapi.com/v1/news/top?api_token=kBCM5I16qNd0tibV4V4iDx4EhJeKnqs7pMcn8lBo&locale=us&limit=5`
 
   const [news, setNews] = useState([]);
 
@@ -36,7 +36,7 @@ const Dashboard = () => {
       <Navbar />
       <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
         <HotTopicsNews navigate={navigate} news={news} />
-        <LatestNews navigate={navigate} newsTop={news} />
+        <LatestNews navigate={navigate} news={news} />
       </div>
       <Footer />
     </>
