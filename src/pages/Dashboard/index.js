@@ -20,11 +20,11 @@ const Dashboard = () => {
           /* the request was made and the server responded
           with a status code that falls out of the range of 2xx */
           // console.log(error.response.data)
-          console.log('error', error.response.data)
+          // console.log('error', error.response.data)
         }
       })
   }
-  console.log('news', news)
+  // console.log('news', news)
   // console.log('news', news.data[0].image_url)
 
   useEffect(() => {
@@ -34,10 +34,10 @@ const Dashboard = () => {
   return (
     <>
       <Navbar />
-      <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
+      {/* <div style={{ display: 'flex', justifyContent: 'flex-start', flexWrap: 'wrap' }}>
         <HotTopicsNews navigate={navigate} news={news} />
         <LatestNews navigate={navigate} news={news} />
-      </div>
+      </div> */}
       <Footer />
     </>
   );
